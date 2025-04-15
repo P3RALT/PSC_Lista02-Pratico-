@@ -18,12 +18,13 @@ public class Lista02_Atv04 {
         desconto[1] = salario[0] * 0.06; 
          salario[1] = salario[0] - desconto[0] - desconto[1];
          
-         System.out.println("---- Descontos: 12% - " + desconto[0] + "----- Descontos VR: 6% " + desconto[1] );
+         System.out.println("---- Descontos: 12% - " + desconto[0] + "| Descontos VR: 6% " + desconto[1] );
          System.out.println("[ Salario Bruto: " + salario[0] + " ]" 
                  + "[ Salario Liquido: " + salario[1] + " ]");
          
          System.out.println("[ Vc tem boletos pra pagar? ( 1 ) SIM / ( 2 ) NAO ");
          opcao[0] = Ler.nextByte();
+         
             switch(opcao[0]){
                 case 1: System.out.print(" -- > Quantos Boletos vc tem pra pagar? ");
                           opcao[1] = Ler.nextByte();
@@ -34,24 +35,18 @@ public class Lista02_Atv04 {
                              System.out.print("[ -- " + i + " Boleto -- ] \n---> Valor: ");
                              boletos[i] = Ler.nextDouble();
                                 if(boletos[i] < salario[1]){
+                                    
                                     tBoletos = salario[1] - boletos[i];
                                     System.out.println(" [ -- ] BOLETO PAGO - R$ " + boletos[i] 
                                             + "\n ---> SALDO: " + tBoletos);
                                 } else { System.out.println("<-- SALDO INSUFICIENTE --> " + "\n-->" + salario[1]);
-                                }
+                                break; }
                               } break;    
               
 
                 case 2: System.out.println("Tenha um Bom dia!!");  break; }
-         
-         
-         
-         
-
-         
-             
-             
             
+             
         }
     }
        
